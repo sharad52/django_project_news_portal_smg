@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- style.css -->
+        <link rel = "stylesheet" type = "text/css" href="{% static 'css/navbar.css' %}">
+        <!-- top bar -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/topbar.css' %}">
+        <title>
+            {% block title %}
+
+            {% endblock %}
+        </title>
+    {% endblock %}
+</head>
+<body>
+    <!-- top bar -->
+    {% include 'partials/_topbar.html' %}
+    
+    <!-- Nab Bar -->
+    {% include 'partials/_navbar.html' %}
+
+    <!-- Main content -->
+    {% block content %}
+
+    {% endblock %}
+
+    <!-- Footer -->
+    {% include 'partials/_footer.html' %}
+
+    <!-- script.js -->
+    <script src = "{% static 'js/myscript.js' %}" type="text/javascript"></script>
+
+</body>
+</html>
