@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+    {{ full_news.news_title }}
+    {{ full_news.title}}
+    
+    {{ full_news.created_at}}
+    {{ full_news.publisher }}
+    <img class="themeImage" src="{{ full_news.image.url}}">
+    {{ full_news.content }}
+    <h3>{{item.subtitle1}}</h3>
+    <p>{{item.content1}}</p>
+
+{% endblock %}

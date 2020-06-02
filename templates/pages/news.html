@@ -1,1 +1,9 @@
-<h1>your news will listed here</h1>
+{% extends 'base.html' %}
+{% block content %}
+    <form action="submit" method="GET">
+        <label> Enter Number:</label>
+        <input type="text" name="num1">
+        <input type="submit">
+        
+    </form>
+{% endblock %}
